@@ -1,0 +1,366 @@
+/* 404.CSS - Versión simplificada */
+
+/* ===== BASE ===== */
+.error-page {
+    background: var(--future-dark);
+    min-height: 100vh;
+}
+
+/* ===== HERO ERROR SIMPLE ===== */
+.error-hero {
+    padding: 150px 0 80px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0e17 0%, #1a1a2e 100%);
+    position: relative;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Código de Error Simple */
+.error-code-simple {
+    margin-bottom: 40px;
+}
+
+.error-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10rem;
+    font-weight: 900;
+    color: azure;
+    background: linear-gradient(135deg, var(--future-primary), var(--future-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.digit {
+    animation: digitPulse 3s infinite;
+}
+
+@keyframes digitPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.cat-icon {
+    color: var(--future-accent);
+    font-size: 4rem;
+    animation: catBounce 3s infinite;
+}
+
+@keyframes catBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.error-code-text {
+    color: rgba(226, 232, 240, 0.5);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Imagen de Error */
+.error-image-container {
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.error-image-placeholder {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius-future);
+    padding: 60px 40px;
+    border: 2px dashed rgba(0, 217, 255, 0.3);
+    text-align: center;
+    color: rgba(226, 232, 240, 0.5);
+}
+
+.error-image-placeholder i {
+    font-size: 4rem;
+    color: var(--future-primary);
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.error-image-placeholder p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.error-image-placeholder small {
+    font-size: 0.9rem;
+    color: rgba(226, 232, 240, 0.3);
+}
+
+.error-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-future);
+    border: 2px solid rgba(0, 217, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Mensaje Simple */
+.error-message-simple {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.error-title {
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.error-title i {
+    color: var(--future-primary);
+}
+
+.error-description {
+    color: rgba(226, 232, 240, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Iconos de Gatitos */
+.cats-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.cat-icon-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-future);
+    padding: 20px 15px;
+    border: 1px solid rgba(0, 217, 255, 0.1);
+    transition: var(--transition-tech);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cat-icon-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--future-accent);
+    box-shadow: 0 5px 15px rgba(255, 0, 110, 0.2);
+}
+
+.cat-icon-item i {
+    font-size: 2rem;
+    color: var(--future-accent);
+}
+
+.cat-icon-item span {
+    color: rgba(226, 232, 240, 0.8);
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Botones de Acción Simple */
+.error-actions-simple {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.btn-error {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: var(--radius-round);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-tech);
+    border: 2px solid transparent;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: var(--gradient-future);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glow-primary);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--future-primary);
+    border-color: var(--future-primary);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 217, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.btn-accent {
+    background: rgba(255, 0, 110, 0.1);
+    color: var(--future-accent);
+    border-color: var(--future-accent);
+}
+
+.btn-accent:hover {
+    background: rgba(255, 0, 110, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Consola Simple */
+.error-console-simple {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius-future);
+    padding: 25px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    font-family: 'Courier New', monospace;
+    max-width: 500px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.console-line {
+    color: var(--future-primary);
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+}
+
+.prompt {
+    color: var(--future-success);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Efectos de fondo */
+.error-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.error-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, rgba(0, 217, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 217, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .error-number {
+        font-size: 5rem;
+    }
+    
+    .cat-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .error-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .error-number {
+        font-size: 4rem;
+        gap: 15px;
+    }
+    
+    .cat-icon {
+        font-size: 2.5rem;
+    }
+    
+    .error-title {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cats-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .error-actions-simple {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-error {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .error-number {
+        font-size: 3rem;
+        gap: 10px;
+    }
+    
+    .cat-icon {
+        font-size: 2rem;
+    }
+    
+    .cats-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .cat-icon-item {
+        padding: 15px 10px;
+    }
+    
+    .cat-icon-item i {
+        font-size: 1.5rem;
+    }
+    
+    .cat-icon-item span {
+        font-size: 0.8rem;
+    }
+    
+    .error-console-simple {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+}

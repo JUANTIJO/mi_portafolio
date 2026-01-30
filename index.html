@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a mi portafolio</title>
+    <meta name="description" content="Portafolio profesional innovador de Juan Luis Tijo Osco con animaciones futuristas">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Futurista -->
+    <nav class="navbar navbar-futurista">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-terminal"></i>
+                <span class="logo-text">MI HOJA DE VIDA</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="404.html">Proyectos</a></li>
+                <li><a href="404.html">Blog</a></li>
+                <li><a href="404.html">Contacto</a></li>
+                <!-- <li class="nav-cta">
+                    <button id="toggleParticles" class="btn-effect">
+                        <i class="fas fa-magic"></i> Efectos
+                    </button>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Principal con Efectos -->
+    <section class="hero-futurista">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-gradient" id="typedTitle"></span>
+                        <span class="title-sub">Técnico Superior en Sistemas Informáticos</span>
+                    </h1>
+                    <p class="hero-description">
+                        Transformando ideas en soluciones digitales innovadoras. 
+                        Especialista en desarrollo, soporte técnico TIC y docencia.
+                        Investigador de nuevas tendencias tecnologicas, aprendizaje continuo.
+                    </p>
+                    
+                    <!-- Stats Animados -->
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-count="8">0</div>
+                            <div class="stat-label">Años Experiencia General</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="10">0+</div>
+                            <div class="stat-label">Proyectos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="100%">0</div>
+                            <div class="stat-label">Compromiso</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="24">0</div>
+                            <div class="stat-label">Horas Respuesta</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones de Acción -->
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn-futurista btn-primary">
+                            <i class="fas fa-rocket"></i> Contactar Ahora
+                        </a>
+                        <a href="assets/pdf/CV_Tecnico_Superior_Juan_Luis_Tijo_Osco.pdf" 
+                           download 
+                           class="btn-futurista btn-secondary">
+                            <i class="fas fa-download"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Visual Hero -->
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <!-- Avatar con efectos -->
+                        <div class="avatar-container">
+                            <div class="avatar">
+                                <img src="assets/imagenes/perfil.jpg" alt="Juan Luis Tijo Osco" class="avatar-img">
+                                <div class="avatar-glow"></div>
+                            </div>
+                            <div class="avatar-ring ring-1"></div>
+                            <div class="avatar-ring ring-2"></div>
+                            <div class="avatar-ring ring-3"></div>
+                        </div>
+                        
+                        <!-- Iconos flotantes -->
+                        <div class="floating-icons">
+                            <div class="floating-icon" data-tooltip="HTML5">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="floating-icon" data-tooltip="CSS3">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="floating-icon" data-tooltip="JavaScript">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="floating-icon" data-tooltip="React">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="floating-icon" data-tooltip="Node.js">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="floating-icon" data-tooltip="Database">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="floating-icon" data-tooltip="Git">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="floating-icon" data-tooltip="Cloud">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Efectos de fondo -->
+        <div class="hero-effects">
+            <div class="grid-lines"></div>
+            <div class="scanline"></div>
+            <div class="particulas" id="particulasContainer"></div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí  -->
+    <section class="sobre-mi-futurista">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-user-astronaut"></i>
+                    Sobre <span class="highlight">Mí</span>
+                </h2>
+                <p class="section-subtitle">Conoce mi trayectoria y habilidades</p>
+            </div>
+            
+            <div class="sobre-content">
+                <!-- Información Personal -->
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-id-card"></i>
+                        <h3>Información Personal</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Nombre Completo:</strong>
+                                <span>Tec. Sup. Juan Luis Tijo Osco</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Título:</strong>
+                                <span>Técnico Superior en Sistemas Informáticos</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Ubicación:</strong>
+                                <span>La Paz, Bolivia</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <strong>Idiomas:</strong>
+                                <span>Español, Inglés Técnico, Aymara Básico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Educación -->
+                <div class="educacion-card">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Educación</h3>
+                    </div>
+                    <div class="timeline-edu">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Licenciatura en Informática</h4>
+                                <p>Universidad Mayor de San Andrés</p>
+                                <span class="timeline-badge">Actualmente en 6to Semestre</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Técnico Superior en Sistemas Informáticos</h4>
+                                <p>INCOS - La Paz (2013-2015)</p>
+                                <span class="timeline-badge">Titulado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Bachiller en Humanidades</h4>
+                                <p>U.E. Experimental "Hernando Siler Reyes"</p>
+                                <span class="timeline-badge">Graduado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Habilidades Técnicas -->
+                <div class="habilidades-card">
+                    <div class="card-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Habilidades Técnicas</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Desarrollo Web</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Soporte Técnico</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Base de Datos</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Redes</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Docencia</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Administración de Sistemas</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Profesional -->
+    <section class="experiencia-futurista">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Experiencia <span class="highlight">Profesional</span>
+                </h2>
+                <p class="section-subtitle">Mi trayectoria laboral en tecnología y docencia </p>
+            </div>
+            
+            <div class="timeline-experiencia">
+                <!-- Experiencia 1 -->
+                <div class="timeline-exp">
+                    <div class="timeline-date">
+                        <span>2020</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-exp">
+                            <div class="exp-header">
+                                <h3>Docente de Primaria y Apoyo Pedagógico</h3>
+                                <span class="exp-company">U.E. Prof. Jaime Escalante</span>
+                            </div>
+                            <div class="exp-content">
+                                <p>Desarrollo de cursos alineados con el plan de estudios asignados por el ministerio de educación, seguimiento de progresión estudiantil y apoyo a docentes con TIC's emergentes.</p>
+                                <div class="exp-tags">
+                                    <span class="tag">Docencia Prim - Sec</span>
+                                    <span class="tag">TIC's</span>
+                                    <span class="tag">Pedagogía</span>
+                                    <span class="tag">Psicopedagogía</span>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <span class="exp-duration">Marzo 2020 - Noviembre 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experiencia 2 -->
+                <div class="timeline-exp">
+                    <div class="timeline-date">
+                        <span>2019</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-exp">
+                            <div class="exp-header">
+                                <h3>Auxiliar de Sistemas y Almacenes</h3>
+                                <span class="exp-company">Orquesta Sinfónica Nacional</span>
+                            </div>
+                            <div class="exp-content">
+                                <p>Mantenimiento de equipos, desarrollo web, control de inventarios y cotización de materiales electrónicos.</p>
+                                <div class="exp-tags">
+                                    <span class="tag">Soporte Técnico</span>
+                                    <span class="tag">Soporte Redes</span>
+                                    <span class="tag">Desarrollo Web</span>
+                                    <span class="tag">Inventarios</span>
+                                    <span class="tag">Cotizaciones</span>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <span class="exp-duration">Febrero 2019 - Noviembre 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experiencia 3 -->
+                <div class="timeline-exp">
+                    <div class="timeline-date">
+                        <span>2017-2018</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-exp">
+                            <div class="exp-header">
+                                <h3>Asistente Administrativo</h3>
+                                <span class="exp-company">Social Jurídico "UTASA"</span>
+                            </div>
+                            <div class="exp-content">
+                                <p>Gestión documental, atención personalizada al cliente, procesamiento de información en bases de datos y organización de archivos masivos.</p>
+                                <div class="exp-tags">
+                                    <span class="tag">Administración de documentos</span>
+                                    <span class="tag">Bases de Datos</span>
+                                    <span class="tag">Atención al Cliente</span>
+                                    <span class="tag">gestión de Archivos</span>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <span class="exp-duration">Enero 2017 - Enero 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experiencia 4 -->
+                <div class="timeline-exp">
+                    <div class="timeline-date">
+                        <span>2012-2016</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-exp">
+                            <div class="exp-header">
+                                <h3>Técnico en Soporte y Desarrollo</h3>
+                                <span class="exp-company">"D & M" Enterprise Servicios y Suministros</span>
+                            </div>
+                            <div class="exp-content">
+                                <p>Soporte técnico de computadoras, desarrollo de sistemas informaticos, administración de redes y funciones de auxiliar de oficina.</p>
+                                <div class="exp-tags">
+                                    <span class="tag">Desarrollo</span>
+                                    <span class="tag">Redes</span>
+                                    <span class="tag">Soporte técnico</span>
+                                    <span class="tag">Auxiliar de oficina</span>
+                                </div>
+                            </div>
+                            <div class="exp-footer">
+                                <span class="exp-duration">Enero 2012 - Enero 2016</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto Rápido -->
+    <section class="contacto-rapido" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-comments"></i>
+                    Contacto <span class="highlight">Rápido</span>
+                </h2>
+                <p class="section-subtitle">¿Listo para trabajar juntos?</p>
+            </div>
+            
+            <div class="contacto-grid">
+                <!-- Formulario de Contacto Rápido -->
+                <div class="form-rapido">
+                    <form id="contactoRapido">
+                        <div class="input-group floating-label">
+                            <input type="text" id="nombreRapido" name="nombre" required>
+                            <label for="nombreRapido">
+                                <i class="fas fa-user"></i>
+                                Tu Nombre
+                            </label>
+                            <div class="input-line"></div>
+                        </div>
+                        
+                        <div class="input-group floating-label">
+                            <input type="email" id="emailRapido" name="email" required>
+                            <label for="emailRapido">
+                                <i class="fas fa-envelope"></i>
+                                Tu Email
+                            </label>
+                            <div class="input-line"></div>
+                        </div>
+                        
+                        <div class="input-group floating-label">
+                            <textarea id="mensajeRapido" name="mensaje" rows="3" required></textarea>
+                            <label for="mensajeRapido">
+                                <i class="fas fa-comment"></i>
+                                Mensaje Rápido
+                            </label>
+                            <div class="input-line"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn-futurista btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviame tu Mensaje
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Info de Contacto -->
+                <div class="contacto-info">
+                    <div class="contacto-items">
+                        <div class="contacto-item">
+                            <div class="contacto-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contacto-content">
+                                <h4>Email</h4>
+                                <p>tijooscojuan@gmail.com</p>
+                                <button class="btn-copy" data-text="tijooscojuan@gmail.com">
+                                    <i class="far fa-copy"></i> Copiar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item">
+                            <div class="contacto-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contacto-content">
+                                <h4>Teléfono</h4>
+                                <p>+591 71245880</p>
+                                <button class="btn-copy" data-text="+59171245880">
+                                    <i class="far fa-copy"></i> Copiar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item">
+                            <div class="contacto-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contacto-content">
+                                <h4>Ubicación</h4>
+                                <p>La Paz, Bolivia</p>
+                                <button class="btn-map">
+                                    <i class="fas fa-directions"></i> Ver Mapa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Redes Sociales -->
+                    <div class="social-contact">
+                        <h4>Sígueme en Redes</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Tik Tok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack-index">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="fas fa-laptop-code"></i>
+                Tech <span class="highlight">Stack</span>
+            </h2>
+            <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+        </div>
+        
+        <div class="tech-grid">
+            <!-- Frontend -->
+            <div class="tech-category">
+                <h3><i class="fas fa-code"></i> Frontend</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend & Databases -->
+            <div class="tech-category">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code"></i>
+                        <span>C# (.NET)</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Bases de Datos -->
+            <div class="tech-category">
+                <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                <div class="tech-items db-items">
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <span>SQLite</span>
+                    </div>
+                </div>
+            </div>  
+            
+            <!-- Frameworks -->
+            <div class="tech-category">
+                <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fab fa-laravel"></i>
+                        <span>Laravel</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-python"></i>
+                        <span>Django</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code"></i>
+                        <span>CodeIgniter</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Herramientas & DevOps -->
+            <div class="tech-category">
+                <h3><i class="fas fa-tools"></i> Herramientas & DevOps</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-terminal"></i>
+                        <span>Terminal/Bash</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-linux"></i>
+                        <span>Linux</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Redes & Sistemas -->
+            <div class="tech-category">
+                <h3><i class="fas fa-network-wired"></i> Redes & Sistemas</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Ciberseguridad Básica</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Cisco Packet Tracer</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-server"></i>
+                        <span>Administración de Redes</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Habilidades Complementarias -->
+            <div class="tech-category">
+                <h3><i class="fas fa-star"></i> Habilidades Adicionales</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Ofimática Intermedia</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-video"></i>
+                        <span>Edición de Video</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-image"></i>
+                        <span>Edición de Imagen</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-ubuntu"></i>
+                        <span>Open Source Tools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer Mejorado -->
+    <footer class="footer-futurista">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-terminal"></i>
+                        <span>Juan Luis Tijo Osco</span>
+                    </div>
+                    <p class="footer-motto">
+                        Transformando ideas en soluciones digitales innovadoras
+                    </p>
+                    <div class="footer-actions">
+                        <a href="assets/pdf/CV_Tecnico_Superior_Juan_Luis_Tijo_Osco.pdf" 
+                           download 
+                           class="btn-footer">
+                            <i class="fas fa-download"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navegación Rápida</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a href="#experiencia">Experiencia</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto Directo</h3>
+                    <div class="contacto-mini">
+                        <p><i class="fas fa-envelope"></i> tijooscojuan@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +591 71245880</p>
+                        <p><i class="fas fa-map-marker-alt"></i> La Paz, Bolivia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © 2026 Juan Luis Tijo Osco. Todos los derechos reservados.
+                    <span class="tech-heart">
+                        <i class="fas fa-heart"></i> Hecho con código y pasión
+                    </span>
+                </p>
+                <div class="footer-tech">
+                    <span>Tech Stack:</span>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-react"></i>
+                    <i class="fab fa-node-js"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Efecto de partículas en footer -->
+        <div class="footer-particles"></div>
+    </footer>
+
+    <!-- Modal de Mapa -->
+    <div class="modal-map" id="mapModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeMap">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3><i class="fas fa-map-marker-alt"></i> Ubicación</h3>
+            <div class="map-placeholder">
+                <div class="map-mockup">
+                    <div class="map-pin">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <p>La Paz, Bolivia</p>
+                    <p>Zona Central, cerca del centro de la ciudad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificaciones Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Canvas para partículas -->
+    <canvas id="particlesCanvas" class="particles-canvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="js/contacto.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
